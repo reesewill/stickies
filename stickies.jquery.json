@@ -1,6 +1,6 @@
 {
-	"name": "ui.stickies",
-	"version": "0.0.3",
+	"name": "ot.stickies",
+	"version": "0.0.4",
 	"title": "JQuery UI Office Tools: Stickies",
 	"author": {
 		"name": "Will Reese",
@@ -17,5 +17,9 @@
 		"jqueryui": ">=1.11"
 	},
 	"description": "jQuery UI Stickies is a lightweight jQuery UI sticky note widget. The widget functions as a simple movable, resizable writing area designed to be used for simple annotations.",
-	"keywords": "ui widget office-tools"
+	"keywords": [
+		"ui",
+		"widget",
+		"office-tools"
+	]
 }
