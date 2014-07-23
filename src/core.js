@@ -20,8 +20,6 @@
 	
 	return $.widget("ot.stickies", {
 		options: {
-			fontFamily: "Western Verdana sans-serif",
-			fontSize: "12px",
 			pinned: 0,
 			position: {
 				my: "left top",
@@ -37,9 +35,6 @@
 				}
 			}
 		},
-		Collapse: function() {
-			
-		},
 		_create: function() {
 			
 			this._createWrapper();
@@ -48,20 +43,20 @@
 			this._createCloseButton();
 			
 			this.element
-				.addClass("ui-sticky-text ui-widget-content")
-				.appendTo(this.uiSticky);
+				.addClass( "ui-sticky-text ui-widget-content" )
+				.appendTo( this.uiSticky );
 				
 			this.uiSticky
 				.resizable()
-				.draggable({containment:"window"})
-				.position(this.options.position);
+				.draggable( { containment: "window"} )
+				.position( this.options.position );
 		},
 		_createCloseButton: function() {
-			this.uiStickyCloseButton = $("<span>")
-				.addClass("ui-sticky-close-button ui-icon ui-icon-closethick")
-				.appendTo(this.uiStickyHeader);
+			this.uiStickyCloseButton = $( "<span>" )
+				.addClass( "ui-sticky-close-button ui-icon ui-icon-closethick" )
+				.appendTo( this.uiStickyHeader );
 				
-			this._on(this.uiStickyCloseButton, {
+			this._on( this.uiStickyCloseButton, {
 				"click": function() {
 					this._destroy();
 				}
@@ -69,52 +64,47 @@
 		},
 		_createWrapper: function() {
 			
-			this.uiSticky = $("<div>")
-				.addClass("ui-sticky ui-sticky-wrapper")
-				.appendTo("body");
+			this.uiSticky = $( "<div>" )
+				.addClass( "ui-sticky ui-sticky-wrapper" )
+				.appendTo( "body" );
 		},
 		_createHeader: function() {
 			
-			this.uiStickyHeader = $("<div>")
-				.addClass("ui-sticky-header ui-widget-header")
-				.prependTo(this.uiSticky);
+			this.uiStickyHeader = $( "<div>" )
+				.addClass( "ui-sticky-header ui-widget-header" )
+				.prependTo( this.uiSticky );
 		},
 		_createPin: function() {
 			
-			this.uiStickyPin = $("<span>")
-				.addClass("ui-sticky-pin ui-icon ui-icon-pin-s")
-				.prependTo(this.uiStickyHeader);
+			this.uiStickyPin = $( "<span>" )
+				.addClass( "ui-sticky-pin ui-icon ui-icon-pin-s" )
+				.prependTo( this.uiStickyHeader );
 				
-			this._on(this.uiStickyPin, {
+			this._on( this.uiStickyPin, {
 				"click": this._pin
 			});
 		},
-		_pin: function(value) {
+		_pin: function( value ) {
 			
-			if(typeof(value) === "object") {
+			if ( typeof( value ) === "object" ) {
 				this.options.pinned = !this.options.pinned;
 				value = this.options.pinned;
 			}
 			
 			this.uiStickyPin
-				.toggleClass("ui-icon-pin-s", !value)
-				.toggleClass("ui-icon-pin-w", value);
+				.toggleClass( "ui-icon-pin-s", !value )
+				.toggleClass( "ui-icon-pin-w", value );
 				
-			this.uiSticky.toggleClass("ui-sticky-pinned", value);
+			this.uiSticky.toggleClass( "ui-sticky-pinned", value );
 		},
-		_setOption: function(key, value) {
+		_setOption: function( key, value ) {
 			
-			this._super(key,value);
+			this._super( key, value );
 			
-			if(key === "pinned") {
-				this._pin(value);
+			if ( key === "pinned" ) {
+				this._pin( value );
 			}
-			else if(key === "font-family") {
-				this.element.css("font-family", value);
-			}
-			else if(key === "font-size") {
-				this.element.css("font-size", value);
-			}
+
 		},
 		_destroy: function() {
 			this.uiSticky.remove();

@@ -1,0 +1,25 @@
+<!DOCTYPE HTML />
+<html>
+	<head>
+		<title>jQuery UI Stickies</title>
+	</head>
+	<body>
+		<div class="page-extender" style="height: 200%;">
+			<a class="js-create-sticky" href="#">Create Sticky</a>
+			
+			<script type="text/javascript" src="../libs/jquery-1.11.1.min.js"></script>
+			<script type="text/javascript" src="../libs/jquery-ui.min.js"></script>
+			<script type="text/javascript" src="../src/core.js"></script>
+			
+			<script type="text/javascript">
+				$( ".js-create-sticky" ).on( "click", function() {
+					$( "<textarea>" ).appendTo( ".page-extender" ).stickies();
+					return false;
+				});
+			</script>
+			
+			<link rel="stylesheet" type="text/css" href="../libs/jquery-ui.min.css" />
+			<link rel="stylesheet" type="text/css" href="../src/stickies.css" />
+		</div>
+	</body>
+</html>
