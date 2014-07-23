@@ -1,7 +1,7 @@
 {
-	"name": "ot.stickies",
-	"version": "0.0.4",
-	"title": "JQuery UI Office Tools: Stickies",
+	"name": "stickies",
+	"version": "0.0.5",
+	"title": "jQuery UI Office Tools: Stickies",
 	"author": {
 		"name": "Will Reese",
 		"email": "reesewill@gmail.com"
