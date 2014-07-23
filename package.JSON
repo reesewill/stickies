@@ -1,0 +1,19 @@
+{
+	"name": "ui.stickies",
+	"version": "0.0.1",
+	"title": "JQuery UI Office Tools: Stickies",
+	"author": {
+		"name": "Will Reese",
+		"email": "reesewill@gmail.com"
+	},
+	"licenses": [
+		{
+			"type": "BSD 2-Clause",
+			"url": "https://github.com/reesewill/stickies/blob/master/LICENSE.txt"
+		}
+	],
+	"dependencies": {
+		"jquery": ">=1.9",
+		"jqueryui": ">=1.11"
+	}
+}
