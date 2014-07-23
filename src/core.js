@@ -1,5 +1,5 @@
 //jQuery UI Stickies
-//@VERSION 0.0.1
+//@VERSION 0.0.2
 
 (function( factory ) {
 	if ( typeof define === "function" && define.amd ) {

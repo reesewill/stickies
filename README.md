@@ -8,4 +8,4 @@ For basic jQuery UI widget documentation, please refer to the official jQuery UI
 
 Transform the selected textarea element into a sticky.
 
-$('textarea#selector').stickies();
+`$('textarea#selector').stickies();`
